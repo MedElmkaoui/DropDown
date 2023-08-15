@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400&display=swap');
+
+/* CSS Code */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+body{ 
+    font-family: 'Poppins';
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-color: #EBEBEB;
+}
+.select .top{ 
+    z-index: 0;
+    position: relative;
+    width: 20rem;
+    padding: 1.5rem 1.5rem;
+    border-radius: 0.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    box-shadow: 5px 5px 25px #d2acebc7;
+    overflow: hidden;
+    animation: AnimateToSection 2s ease ;
+}
+.select .top .btns{ 
+    z-index: 0;
+    display: flex;
+    flex-wrap: wrap;
+    display: none;
+    align-items: center;
+}
+.select .top span{
+    font-size: 15px;
+    margin-left: 0.5rem;
+    color: rgba(105, 103, 103, 0.397);
+}
+.select .top span:where(.animation){
+    display: none;
+}
+.select .top .icon_arr{
+    
+    margin-left: 0.5rem;
+    right: 1rem;
+    font-size: 22px;
+    color: #974EC3;
+    transition: all 0.8s;
+}
+.drop_icon_clicked{
+    transform:  rotate(180deg);
+}
+.btn{
+    display: flex;
+    align-items: center;
+    border: 0.5px solid #974EC3;
+    padding: 0.5rem 0.5rem  0.5rem  1rem;
+    margin: 0.3rem 0.3rem;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    animation: AnimateBtn 1.5s ease-in-out;
+}
+.btn p{
+    margin-right: 0.5rem;
+    font-size: 18px;
+    color: #44046b;
+    transition: all 0.8s;
+    overflow: hidden;
+}
+.list_options{
+    z-index: 1;
+    width: 20rem;
+    border-radius: 0.8rem;
+    margin-top: 1.5rem;
+    padding: 1.5rem 1.2rem;
+    background-color: white;
+    box-shadow: 5px 5px 25px #d2aceb59;
+    display: none;
+    overflow: hidden;
+    transition: width 0.8s; 
+    transition: height 1.5s ease;
+}
+.show_list_options{
+    display: block;
+}
+.option{
+    border-radius: 0.8rem;
+    cursor: pointer;
+    padding: 1rem 1.5rem;
+    transition: all 0.5s;
+}
+.option:hover{
+    background-color: #9325dda1;
+    color: white;
+}
+@keyframes AnimateBtn {
+    0%, 10%{
+        width: 1.2rem;
+    }
+    50%{
+        width: 20%;
+    }
+    100%{
+        width: auto;
+    }
+}
+@keyframes AnimateToSection {
+    0%, 30%{
+        width: 2rem;
+    }
+    100%{
+        width: 20rem;
+    }
+    
+}
+
+
+
+
+
+
+
+
+
